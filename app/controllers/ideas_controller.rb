@@ -3,6 +3,7 @@ class IdeasController < ApplicationController
   # GET /ideas.json
   def index
     @ideas = Idea.order("rating asc").all
+    @message = "Hello"
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @ideas }
